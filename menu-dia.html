@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú del día — El Córner de Montbau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/menu-dia.css" />
+</head>
+<body>
+
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="section-compact">
+      <div class="container">
+        <p class="badge-today"><span class="ember-dot"></span> Menú de hoy · <span id="today-date"></span></p>
+        <h1>Menú del día</h1>
+        <p class="lead" style="color: var(--color-stone); max-width: 50ch;">Entrante, plato principal y postre, seleccionados hoy de entre nuestra carta.</p>
+
+        <div class="generator-panel">
+          <p class="note">Prototipo del generador: en producción, este menú lo compone automáticamente un backend ligero cada semana, evitando repetir platos recientes.</p>
+          <button class="btn btn-outline" id="regenerate-btn">🔄 Generar otro (demo)</button>
+        </div>
+
+        <div class="menu-dia-cards" id="menu-dia-mount"></div>
+
+        <p style="margin-top: var(--sp-4);"><a href="carta.html" class="btn btn-primary">Ver la carta completa</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="data/carta-data.js"></script>
+  <script src="js/menu-generator.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/menu-dia.js"></script>
+</body>
+</html>

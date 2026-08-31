@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Córner de Montbau — Gastronomía Argentina en Barcelona</title>
+  <meta name="description" content="Cortes argentinos a la parrilla, empanadas santiagueñas y pizza a la piedra en el corazón de Montbau, Barcelona." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <div id="header-mount"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow"><span class="ember-dot"></span> Desde 2010 en Montbau</p>
+        <h1 class="hero-title">Lo tenemos <em>todo</em>.</h1>
+        <p class="hero-sub">La calidad de nuestros platos, una zona tranquila y un servicio esmerado. La combinación perfecta de la Argentina más auténtica en Barcelona.</p>
+        <div class="hero-actions">
+          <a href="menu-dia.html" class="btn btn-primary">Menú del día</a>
+          <a href="carta.html" class="btn btn-outline">Ver la carta</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint"><span>Descubre</span><span class="line"></span></div>
+    </section>
+
+    <div class="grate-divider"></div>
+
+    <!-- LOS CLÁSICOS -->
+    <section class="section" id="clasicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Los Clásicos</p>
+            <h2>Lo que nos define</h2>
+          </div>
+          <p class="lead">Tres pilares de nuestra cocina, tal y como se cocinan en Argentina.</p>
+        </div>
+        <div class="classics-grid" id="classics-mount"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="section section-compact" id="nosotros">
+      <div class="container about-grid reveal">
+        <div>
+          <p class="eyebrow">Nosotros</p>
+          <h2>De Santiago del Estero a Montbau</h2>
+        </div>
+        <div class="about-text" id="about-mount"></div>
+      </div>
+    </section>
+
+    <!-- INFO STRIP -->
+    <section class="section-compact" id="localizacion">
+      <div class="container">
+        <div class="info-strip reveal">
+          <div class="info-item">
+            <p class="eyebrow">Horario</p>
+            <p>Todos los días<br />13:00–16:00 y 20:00–23:30</p>
+          </div>
+          <div class="info-item">
+            <p class="eyebrow">Ubicación</p>
+            <p id="address-mount"></p>
+          </div>
+          <div class="info-item">
+            <p class="eyebrow">Reservas</p>
+            <p id="phone-mount"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container contact-box reveal">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Reservamos tu mesa?</h2>
+          <p class="lead">Escríbenos o llámanos, y te tendremos la brasa lista.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#" id="phone-cta" class="btn btn-primary">Llamar ahora</a>
+          <a href="carta.html" class="btn btn-outline">Ver la carta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="data/carta-data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

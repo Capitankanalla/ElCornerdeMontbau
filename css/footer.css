@@ -1,0 +1,48 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--color-charcoal-2);
+  border-top: 1px solid rgba(138, 122, 109, 0.25);
+  padding: var(--sp-5) 0 var(--sp-3);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-4);
+}
+
+@media (max-width: 720px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+.footer-col h4 {
+  font-size: var(--fs-sm);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-light);
+  margin-bottom: var(--sp-2);
+}
+
+.footer-col p, .footer-col a {
+  color: var(--color-stone);
+  font-size: var(--fs-sm);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.footer-col a:hover { color: var(--color-cream); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(138, 122, 109, 0.18);
+  padding-top: var(--sp-3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--color-stone-dark);
+  font-family: var(--font-mono);
+}

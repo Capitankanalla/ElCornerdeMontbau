@@ -1,0 +1,225 @@
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+/* --- Section heading --- */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  flex-wrap: wrap;
+}
+.section-head h2 { font-size: var(--fs-xl); margin: 0; }
+.section-head .lead { color: var(--color-stone); max-width: 42ch; }
+
+/* --- Classic cards (Los Clásicos) --- */
+.classics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+}
+@media (max-width: 860px) {
+  .classics-grid { grid-template-columns: 1fr; }
+}
+.classic-card {
+  background: var(--color-charcoal-2);
+  border: 1px solid rgba(138,122,109,0.2);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  transition: transform var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+.classic-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-ember);
+}
+.classic-card h3 { font-size: 1.3rem; margin-bottom: var(--sp-1); }
+.classic-card p { font-size: var(--fs-sm); }
+.classic-card .tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* --- Tabs (used in Carta) --- */
+.tabs {
+  display: flex;
+  gap: var(--sp-1);
+  overflow-x: auto;
+  padding-bottom: var(--sp-2);
+  margin-bottom: var(--sp-4);
+  scrollbar-width: thin;
+}
+.tab-btn {
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-stone);
+  border: 1px solid rgba(138,122,109,0.3);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+.tab-btn:hover { color: var(--color-cream); }
+.tab-btn.is-active {
+  background: var(--color-ember);
+  border-color: var(--color-ember);
+  color: var(--color-cream);
+}
+
+.tab-panel { display: none; }
+.tab-panel.is-active {
+  display: block;
+  animation: fade-in var(--dur-med) var(--ease-out);
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Dish list (Carta / Menú del día) --- */
+.dish-list {
+  display: flex;
+  flex-direction: column;
+}
+.dish-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px dashed rgba(138,122,109,0.25);
+}
+.dish-row:last-child { border-bottom: none; }
+.dish-info h3 {
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: var(--color-cream);
+}
+.dish-info p {
+  font-size: var(--fs-sm);
+  margin: 0;
+  color: var(--color-stone);
+}
+.dish-price {
+  font-family: var(--font-mono);
+  color: var(--color-gold-light);
+  font-size: var(--fs-md);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --- Category group title inside carta --- */
+.category-title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-1);
+}
+.category-note {
+  font-size: var(--fs-sm);
+  color: var(--color-stone);
+  margin-bottom: var(--sp-3);
+}
+
+/* --- Info strip (horaris/ubicació a la LP) --- */
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+}
+@media (max-width: 780px) {
+  .info-strip { grid-template-columns: 1fr; }
+}
+.info-item {
+  background: var(--color-charcoal-2);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  border: 1px solid rgba(138,122,109,0.18);
+}
+.info-item .eyebrow { margin-bottom: var(--sp-1); }
+
+/* --- Sticky reservation CTA --- */
+.sticky-cta {
+  position: fixed;
+  bottom: var(--sp-3);
+  right: var(--sp-3);
+  z-index: 90;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* --- QR selector page --- */
+.qr-select {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-4);
+  gap: var(--sp-4);
+}
+.qr-select .logo { font-size: 1.8rem; }
+.qr-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+  width: 100%;
+  max-width: 520px;
+}
+@media (max-width: 520px) {
+  .qr-choices { grid-template-columns: 1fr; }
+}
+.qr-choice {
+  background: var(--color-charcoal-2);
+  border: 1px solid rgba(138,122,109,0.25);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5) var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  transition: transform var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+.qr-choice:hover, .qr-choice:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--color-ember);
+}
+.qr-choice .icon { font-size: 2.2rem; }
+.qr-choice h3 { margin: 0; font-size: 1.2rem; }
+
+/* --- Generator panel (demo del "backend lleuger") --- */
+.generator-panel {
+  background: var(--color-charcoal-2);
+  border: 1px solid rgba(201,162,39,0.3);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3) var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+.generator-panel .note {
+  font-size: var(--fs-xs);
+  color: var(--color-stone);
+  font-family: var(--font-mono);
+  max-width: 46ch;
+}
+
+/* --- Badge "hoy" --- */
+.badge-today {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ember-light);
+}

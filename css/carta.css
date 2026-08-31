@@ -1,0 +1,12 @@
+/* ============================================
+   CARTA
+   ============================================ */
+.carta-note {
+  font-size: var(--fs-sm);
+  color: var(--color-gold-light);
+  background: rgba(201,162,39,0.08);
+  border: 1px solid rgba(201,162,39,0.25);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-2) var(--sp-3);
+  margin-bottom: var(--sp-3);
+}

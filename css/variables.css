@@ -1,0 +1,57 @@
+/* ============================================
+   EL CÓRNER DE MONTBAU — Design Tokens
+   ============================================ */
+:root {
+  /* Colors */
+  --color-charcoal: #1c1512;
+  --color-charcoal-2: #241b17;
+  --color-charcoal-3: #2e221c;
+  --color-ember: #c1502e;
+  --color-ember-light: #e07a52;
+  --color-gold: #c9a227;
+  --color-gold-light: #e0bc4f;
+  --color-cream: #f2e8dc;
+  --color-cream-dim: #d8cabb;
+  --color-stone: #8a7a6d;
+  --color-stone-dark: #57493e;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --fs-hero: clamp(2.6rem, 6vw, 5rem);
+  --fs-xl: clamp(1.8rem, 3.4vw, 2.6rem);
+  --fs-lg: clamp(1.3rem, 2.2vw, 1.6rem);
+  --fs-md: 1.05rem;
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.78rem;
+
+  /* Spacing scale */
+  --sp-1: 0.4rem;
+  --sp-2: 0.8rem;
+  --sp-3: 1.4rem;
+  --sp-4: 2.2rem;
+  --sp-5: 3.4rem;
+  --sp-6: 5rem;
+
+  /* Layout */
+  --max-width: 1180px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --header-h: 72px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

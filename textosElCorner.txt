@@ -1,0 +1,333 @@
+console
+.log(
+document
+.body.innerText);
+VM301:2 Saltar al contenido
++34 93 428 21 71 (Titol: Reserves)
+
+(Lang, afegir en)
+Español
+Català
+Anglés
+(Menú)
+LOS CLÁSICOS
+LA CARTA
+NOSOTROS
+LOCALIZACIÓN
+GALERÍA
+CONTACTO
+(Header canviant amb CTA)
+LO
+TENEMOS
+TODO 
+La calidad de nuestros platos,
+Una zona tranquila y un esmerado servicio.
+La combinación perfecta
+CTA Conocenos + 
+ABIERTO 363 DÍAS AL AÑO 
+De lunes a domingo de 09:00 a 00:00h.
+CTA encuentranos + 
+NO TE LO PIENSES. 
+Visitanos y descubre: 
+Auténticas 
+EMPANADAS SANTIGUEÑAS, 
+Genuinas 
+PIZZAS AL HORNO DE PIEDRA, 
+Los mejores 
+CORTES ARGENTINOS. 
+CTA ¿quieres ver la carta? (organitzat cada part en columnes)
+
+
+Los Clásicos
+Empanadas
+
+Carne suave o picante, Mozarella y cebolla, Jamón y queso. Y… alguna sorpresita.
+
+¿Quieres saber más? (Massa repetitiu) --> Carrega popup amb el seguent text:
+
+popup:
+Empanadas Santiagueñas
+
+
+Las empanadas tienen su origen en la antigua Persia, llegan a España a través de los árabes, y por vía española llegan a Argentina.
+
+La tradición de empanada está sobretodo establecida en el norte del país y cada región tiene su propio sello. Obviamente, en EL CÓRNER DE MONTBAU elaboramos las deliciosas empanadas SANTIAGUEÑAS, con las que te queremos trasladar el sabor y el aroma de nuestra tierra.
+
+Para ello ponemos mucha atención en tres puntos clave:
+
+Con el fin de que la carne quede en su punto de jugosidad realizamos el corte a cuchillo.
+La masa la realizamos con harina, salmuera, grasa y leche.
+Y, por último, para que sientan en cada bocado un trozo de Santiago utilizamos especias propias de nuestra tierra.
+
+Realizamos infinidad de empanadas al cabo del día, pero te aseguramos que cada una está hecha con un mimo y trato especial.
+
+Nuestras especialidades son:
+
+Carne suave o picante.
+Mozzarella y cebolla.
+Jamón y queso.
+Y… alguna sorpresita.
+
+×
+
+Cortes Argentinos
+
+Trabajamos, básicamente tres cortes: Entraña, Vacío y Asado de tira.
+
+¿Quieres saber más? (el mateix que el anterior)
+
+Popup: 
+Cortes Argentinos
+
+
+Con todos nuestros extensos campos de pasto y los millones de reses transitando y alimentándose en ellos, el placer de degustar la mejor carne no la hemos heredado de ninguno de los pueblos con el que nos hemos mezclado; cuidar, cortar y comer carne es signo de identidad argentino.
+
+En EL CÓRNER DE MONTBAU trabajamos, básicamente tres cortes:
+
+Entraña. Ubicada en el diafragma, junto a las costillas. Se caracteriza por un intenso sabor y requiere un asado rápido.
+
+Vacío. Corte ubicado entre las costillas falsas y los huecos de las caderas. Al ser una carne fibrosa y para obtener su clásico punto de jugosidad es necesario realizar un asado tranquilo y sin prisas, lo que le da su peculiar textura.
+
+Asado de tira. La parte del costillar cortado transversalmente. La grasa infiltrada en su carne y la cercanía al hueso le aporta su característico y apreciado sabor.
+Imprescindible acompañarlo de nuestro chimichurri.
+
+
+
+Milanesas
+
+Disfruta de nuestras especialidades:
+Napolitana, Suiza y Clásica.
+
+¿Quieres saber más? (Idem als altres)
+
+Popup:
+Milanesas
+
+
+Heredadas de las cotolettas italianas, hemos convertido este sencillo plato en un clásico argentino.
+
+En EL CÓRNER DE MONTBAU, seguimos tres reglas (con nuestros secretillos) esenciales para que las MILANESAS sean inolvidables e irrepetibles para el comensal, ahí van:
+
+-Elección de la carne de ternera lo más tierna posible, a nosotros nos gusta utilizar la nalga.
+-Una vez elegida la carne y cortada en su grueso ideal, damos paso al punto clave para conseguir el gusto y cremosidad deseado: el adobo, y ahí amigos, nos quedamos con nuestro secreto santiagueño.
+-Y, por último, el “golpeo”, es decir aplastar bien la carne con la finalidad de que cuando se empanen formen una unidad carne, huevo y pan rallado.
+
+Nuestras especialidades son:
+
+Napolitana. Servida con salsa napolitana.
+Suiza. Servida con nata, cebolla, queso, jamón y tomate fresco.
+Clásica. Acompañada de nuestras sabrosas patatas.
+
+******************************************************************************
+
+Aqui hi possaría el footer que trobaràs mès avall amb lang amb carrega injecció js
+
+*****************************************************************************
+
+Nova pàgina: La carta o menú del día.
+La idea es eliminar scroll innecessari i crear un qr per carregar als móbils.
+Els plats caldría organitzar-los en json amb els plats, ordenats per tipus, afegint als json seccions i preus
+
+Nuestra Carta
+Entrantes
+Queso provolone al horno con tomate seco y albahaca
+8.90€
+Queso provolone con tomate natural y anchoas
+9.90€
+Tabla de Quesos
+11.90€
+Patatas Bravas
+4.90€
+Empanadas Argentinas D.O. Santiagueñas
+De carne suave – De carne picante –  De pollo –  De Mozzarella y cebolla – De jamón y queso – De tomate, mozzarella y albahaca – Empanada de callos con sofrito de cebolla y pimiento –  Capresse –  Humita.
+3.50€
+(Unidad)
+Empanadas Argentinas de Chorizo y Provolone
+4.00€
+(Unidad)
+Ensaladas
+Ensalada Córner
+Mezclum, queso de cabra, miel, pasas y nueces.
+9.90€
+Ensalada Tibia
+Salteado de verduras con bacon, frutos secos y queso de cabra fundido.
+9.90€
+Ensalada César
+Mezclum, pollo, tomates Cherry picatostes y salsa César.
+10.90€
+Ensalada tropical
+Mix de lechuga, pollo, piña, pasas, salsa rosa.
+8.90€
+Ensalada verde
+7.90€
+Ensalada de salmón
+Escarola, canónigos, virutas de cebolla, salmón ahumado y queso de Burgos.
+11.90€
+Ensalada especial caprese
+Tomate, mozzarella de búfala, albahaca y reducción de menta.
+10.90€
+Ensalada de rúcula
+Crujiente de jamón y de cebolla, parmesano.
+9.90€
+Carnes
+Solomillo de ternera
+La parte más tierna de nuestras carnes
+25.90€
+Vacío
+Corte ubicado entre las costillas falsas y los huecos de las caderas lo que le da su peculiar textura.
+17.90€
+Butifarra Pagés con sanfaina
+Típico plato catalán
+10.50€
+Milanesa napolitana
+Salsa de tomate, queso, jamón dulce y rodajas tomate.
+16.90€
+Milanesa suiza
+16.90€
+Suprema de pollo Suiza
+Nata, mozzarella y cebolla Carameliza.
+15.90€
+Suprema de pollo con patatas
+Pollo macerado y empanado, al horno servido con patatas.
+
+10.90€
+Entrecot de Girona (400 gr)
+Pieza de lomo alto de ternera de Girona
+25.90€
+Entraña de ternera
+El más clásico y sabroso corte argentino
+17.90€
+Churrasco Argentino “asado de tira”
+El clásico asado de tira argentino.
+17.90€
+1/2 Pollo a la Brasa
+Sabroso pollo a la brasa con sus patatas caseras.
+10.90€
+Milanesa de ternera con patatas
+Macerada y empanada, al horno servida con patatas.
+
+11.90€
+Suprema de pollo napolitana
+Salsa de tomate, queso, jamón dulce y rodajas tomate.
+15.90€
+Todas nuestras carnes se acompañan con guarnición
+Pide tu salsa extra Gorgonzola o Cinco Pimientas (suplemento 3.00€)
+Pizzas
+Pizza especial de Rúcula
+Tomate, mozzarella, rúcula, queso parmesano y virutas de jamón serrano.
+13.90€
+Pizza Marinera
+Tomate, mozzarella, atún, gambas, palitos de cangrejos y orégano.
+14.90€
+Pizza 4 Quesos
+Tomate, mozzarella, queso de cabra, brie y gorgonzola.
+12.90€
+Pizza Especial El Córner
+Jamón país, bacon, nata, cebolla, maíz, mozzarella.
+14.90€
+Pizza Americana (barbacoa)
+Tomate, mozzarella, pollo, cebolla y pimiento escalibado.
+13.90€
+Pizza Catalana
+Tomate, mozzarella, butifarra, ajo y orégano.
+12.90€
+Pizza Atún escalibado
+Tomate natural, cebolla, pimiento escalibado y atún natural.
+13.90€
+Pizza Pepperoni
+Tomate, mozzarella, pepperoni y orégano.
+11.90€
+Pizza Margarita
+Tomate, mozzarella y orégano.
+10.90€
+Pizza Noruega
+Tomate, mozzarella, cebolla y salmón.
+15.50€
+Pizza Mexicana
+Tomate, mozzarella, carne, bacon, maíz y un toque de picante.
+13.90€
+Pizza Carbonara
+Salsa carbonara, mozzarella y cebolla.
+13.90€
+Pizza Napolitana
+Tomate, mozzarella, anchoas, tomate natural y parmesano.
+13.90€
+Pizza Mallorquina
+Tomate, mozzarella, queso de cabra, sobrasada de Mallorca y miel.
+13.90€
+Pizza Hawaiana
+Tomate, mozzarella, jamón york, piña.
+11.90€
+Pizza Vegetal
+Tomate, mozzarella y verduras de estación.
+11.90€
+Pizza Jamón champi
+Tomate, mozzarella, champiñones, jamón york y huevo.
+12.50€
+Pizza Prosciutto
+Tomate, mozzarella, jamón york y orégano.
+11.50€
+Pizza del país
+Tomate natural picado, mozzarella, jamón del país, ajo y aceite.
+14.40€
+Ingrediente extra 2.50€
+Pastas
+Canelones Argentinos
+10.90€
+Cinta Argentina
+8.90€
+Tortelini de ricota y espinaca
+10,50€
+Lasaña de carne
+10.90€
+Espaguetis Napolitana
+8.90€
+Girasol de queso y nueces
+10.50€
+Pide tu salsa (suplemento 3.00€)
+
+Crema de Gorgonzola, Pesto genovés, Salsa de Mariscos, Boloñesa, Carbonara, Napolitana.
+
+Postres
+Tiramisú Artesano
+6.90€
+Tarta de la casa
+5.90€
+Crepe de Nutella
+6.90€
+Crepe de dulce de leche
+Panqueque Argentino.
+6.90€
+Suplemento dulce de leche o nata 1,00€
+Sobre Nosotros
+
+La historia de EL CÓRNER DE MONTBAU se sitúa a miles de kilómetros de aquí, en la tierra donde nace nuestra empanada santiagueña, Santiago del Estero.
+
+Ángel cruza el charco con un propósito en mente, conquistar la tierra Barcelonesa con la Argentina gastronómica, a base de conocimiento, calidad, autenticidad y esfuerzo.
+
+Tras varios años conociendo la ciudad, sus gentes, sus gustos, en 2.010 consigue poner en marcha su sueño, poder ofrecer los mejores cortes argentinos y las auténticas empanadas santiagueñas, además de las genuinas pizzas a la piedra, milanesas y supremas.
+
+Hoy en día, EL CÓRNER DE MONTBAU, te ofrece los mejores platos argentinos, nuestro menú actualizado diariamente y las pizzas cocinadas en horno a la piedra.
+
+Localización (Ubicació de google maps)
+Galería (secció a eliminar, més aviat sería quelcom similar a "nuestros clientes")
+Contacto (El tlf per reserves)
+
+
+
+FOOTER: (aquí potser sería interessant afegir info d´al.lergens o celíacs, vegans, etc.)
+ Acepto las condiciones del Aviso legal
+*Campos obligatorios
+
+
+
+
+
+Plaça de Zurbarán, 1, 08035 Barcelona
++34 93 428 21 71
+ 
+
+2017 El corner. All Rights Reserved. | Nota Legal
+
+Go to Top
+undefined

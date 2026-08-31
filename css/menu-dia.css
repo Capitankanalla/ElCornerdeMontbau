@@ -1,0 +1,37 @@
+/* ============================================
+   MENÚ DEL DÍA
+   ============================================ */
+.menu-dia-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+@media (max-width: 860px) {
+  .menu-dia-cards { grid-template-columns: 1fr; }
+}
+.menu-dia-card {
+  background: var(--color-charcoal-2);
+  border: 1px solid rgba(138,122,109,0.2);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.menu-dia-card .step {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-light);
+}
+.menu-dia-card h3 { font-size: 1.15rem; margin: 0.2rem 0; }
+.menu-dia-card p { font-size: var(--fs-sm); color: var(--color-stone); margin: 0; }
+.menu-dia-card .category-hint {
+  margin-top: auto;
+  padding-top: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-stone-dark);
+}
