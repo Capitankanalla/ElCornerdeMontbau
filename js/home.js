@@ -45,32 +45,50 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!heroSlides.length) return;
 
     let currentSlide = 0;
+    let slideTimer = null;
     const heroImage = document.getElementById("hero-image");
     const heroEyebrow = document.querySelector(".hero .eyebrow");
     const heroTitle = document.querySelector(".hero-title");
     const heroSub = document.querySelector(".hero-sub");
+    const slideDuration = 11000;
+
+    const scheduleNextSlide = () => {
+      clearTimeout(slideTimer);
+      slideTimer = setTimeout(() => {
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        renderSlide(currentSlide);
+        scheduleNextSlide();
+      }, slideDuration);
+    };
 
     const renderSlide = (index) => {
       const slide = heroSlides[index];
       if (!slide || !heroImage || !heroEyebrow || !heroTitle || !heroSub) return;
 
+      heroImage.dataset.loaded = "false";
       heroImage.style.opacity = "0";
+      heroImage.style.animation = "none";
 
-      setTimeout(() => {
+      const img = new Image();
+      img.onload = () => {
         heroImage.src = slide.image;
         heroEyebrow.innerHTML = `<span class="ember-dot"></span> ${slide.eyebrow}`;
         heroTitle.textContent = slide.title;
         heroSub.textContent = slide.text;
-        heroImage.style.opacity = "1";
-      }, 600);
+
+        requestAnimationFrame(() => {
+          heroImage.style.animation = "none";
+          void heroImage.offsetWidth;
+          heroImage.style.animation = "hero-zoom 10s cubic-bezier(0.17, 0.84, 0.44, 1) forwards";
+          heroImage.dataset.loaded = "true";
+          heroImage.style.opacity = "1";
+        });
+      };
+      img.src = slide.image;
     };
 
     renderSlide(currentSlide);
-
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % heroSlides.length;
-      renderSlide(currentSlide);
-    }, 5000);
+    scheduleNextSlide();
   } catch (error) {
     console.error("No s'ha pogut carregar el hero:", error);
   }
