@@ -1,0 +1,43 @@
+{
+  "hero": [
+    {
+      "image": "imgs/hero.webp",
+      "eyebrow": "Desde 2010 en Montbau",
+      "title": "Lo tenemos todo.",
+      "text": "La calidad de nuestros platos, una zona tranquila y un servicio esmerado. La combinación perfecta de la Argentina más auténtica en Barcelona."
+    },
+    {
+      "image": "imgs/hero1.webp",
+      "eyebrow": "Auténtica cocina argentina",
+      "title": "El sabor de Argentina.",
+      "text": "Carnes a la parrilla, empanadas y recetas que nos llevan directamente a nuestra tierra."
+    },
+    {
+      "image": "imgs/historia-1.webp",
+      "eyebrow": "Una historia que continúa",
+      "title": "De Santiago del Estero a Montbau.",
+      "text": "Una cocina hecha con tradición, producto y ganas de hacerte sentir como en casa."
+    }
+  ],
+  "classics": {
+    "eyebrow": "Los Clásicos",
+    "title": "Lo que nos define",
+    "lead": "Tres pilares de nuestra cocina, tal y como se cocinan en Argentina."
+  },
+  "about": {
+    "eyebrow": "Nosotros",
+    "title": "De Santiago del Estero a Montbau."
+  },
+  "info": {
+    "schedule": "Todos los días<br>13:00–16:00 y 20:00–23:30",
+    "location": "Ubicación",
+    "reservations": "Reservas"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "¿Reservamos tu mesa?",
+    "text": "Escríbenos o llámanos, y te tendremos la brasa lista.",
+    "call": "Llamar ahora",
+    "menu": "Ver la carta"
+  }
+}
