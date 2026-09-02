@@ -26,7 +26,7 @@
   align-items: center;
   gap: var(--sp-4);
   flex-wrap: wrap;
-  background: var(--color-charcoal-2);
+  background: var(--color-charcoal);
   border-radius: var(--radius-md);
   padding: var(--sp-5);
   border: 1px solid rgba(138,122,109,0.2);

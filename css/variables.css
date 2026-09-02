@@ -3,17 +3,17 @@
    ============================================ */
 :root {
   /* Colors */
-  --color-charcoal: #918e85;
+  --color-charcoal: #f0ede5;
   --color-charcoal-2: #241b17;
   --color-charcoal-3: #2e221c;
-  --color-ember: #c1502e;
-  --color-ember-light: #e07a52;
-  --color-gold: #c9a227;
-  --color-gold-light: #e0bc4f;
-  --color-cream: #f2e8dc;
-  --color-cream-dim: #d8cabb;
+  --color-ember: #58c12e;
+  --color-ember-light: #42db64;
+  --color-gold: #58c12e;
+  --color-gold-light: #42db64;
+  --color-cream: #241b17;
+  --color-cream-dim: #2e221c;
   --color-stone: #8a7a6d;
-  --color-stone-dark: #57493e;
+  --color-stone-dark: #f1e3d9;
 
   /* Typography */
   --font-display: "Fraunces", Georgia, serif;

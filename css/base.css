@@ -24,10 +24,10 @@ h1, h2, h3, h4 {
   font-weight: 600;
   line-height: 1.1;
   margin: 0 0 var(--sp-2);
-  color: var(--color-cream);
+  color: var(--color-stone-dark);
 }
 
-p { margin: 0 0 var(--sp-2); color: var(--color-cream-dim); }
+p { margin: 0 0 var(--sp-2); color: var(--color-stone); }
 
 a { color: inherit; text-decoration: none; }
 
@@ -126,11 +126,12 @@ button:focus-visible,
 }
 .btn-primary:hover { background: var(--color-ember-light); transform: translateY(-2px); }
 
-.btn-outline {
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold-light);
+.btn-secondary {
+  background: var(--color-gold);
+  /* border: 1px solid var(--color-gold); */
+  color: var(--color-cream);
 }
-.btn-outline:hover { background: rgba(201, 162, 39, 0.1); transform: translateY(-2px); }
+.btn-secondary:hover { background: var(--color-gold-light); transform: translateY(-2px); }
 
 /* Reveal-on-scroll utility (no extra page length, just liveliness) */
 .reveal {
