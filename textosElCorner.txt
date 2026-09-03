@@ -1,7 +1,5 @@
-console
-.log(
-document
-.body.innerText);
+console.log(document.body.innerText); //Per extreure els textos de la web.
+
 VM301:2 Saltar al contenido
 +34 93 428 21 71 (Titol: Reserves)
 
@@ -123,8 +121,9 @@ Clásica. Acompañada de nuestras sabrosas patatas.
 Aqui hi possaría el footer que trobaràs mès avall amb lang amb carrega injecció js
 
 *****************************************************************************
+   REVSAR PER MÉS ENDEVANT
 
-Nova pàgina: La carta o menú del día.
+// enllestit. Nova pàgina: La carta o menú del día.
 La idea es eliminar scroll innecessari i crear un qr per carregar als móbils.
 Els plats caldría organitzar-los en json amb els plats, ordenats per tipus, afegint als json seccions i preus
 
@@ -299,6 +298,10 @@ Crepe de dulce de leche
 Panqueque Argentino.
 6.90€
 Suplemento dulce de leche o nata 1,00€
+
+******************************************************************************************
+per definir perque no m´acaba de fer el pes.
+
 Sobre Nosotros
 
 La historia de EL CÓRNER DE MONTBAU se sitúa a miles de kilómetros de aquí, en la tierra donde nace nuestra empanada santiagueña, Santiago del Estero.
@@ -309,25 +312,29 @@ Tras varios años conociendo la ciudad, sus gentes, sus gustos, en 2.010 consigu
 
 Hoy en día, EL CÓRNER DE MONTBAU, te ofrece los mejores platos argentinos, nuestro menú actualizado diariamente y las pizzas cocinadas en horno a la piedra.
 
-Localización (Ubicació de google maps)
-Galería (secció a eliminar, més aviat sería quelcom similar a "nuestros clientes")
-Contacto (El tlf per reserves)
+Localización (Ubicació de google maps, consultar api del maps.)
+Galería (secció a eliminar, més aviat sería quelcom similar a "nuestros clientes"
+amb algunes imatges i mirar d´enllaçar amb bons comentaris del maps)
+Contacto (Canviar per reserves)
 
 
 
 FOOTER: (aquí potser sería interessant afegir info d´al.lergens o celíacs, vegans, etc.)
  Acepto las condiciones del Aviso legal
 *Campos obligatorios
-
+Copyright automatitzable cada any.
 
 
 
 
 Plaça de Zurbarán, 1, 08035 Barcelona
-+34 93 428 21 71
+Reservas 93 428 21 71
  
 
 2017 El corner. All Rights Reserved. | Nota Legal
+
+***********************************************************************************************
+Per eliminar
 
 Go to Top
 undefined
