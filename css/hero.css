@@ -44,7 +44,10 @@
 .hero.is-loaded .hero-content > .hero-actions { transition-delay: 0.24s; }
 
 .hero-title {
+  font-family: var(--font-display);
   font-size: var(--fs-hero);
+  font-weight: 700;
+  line-height: 1.02;
   margin-bottom: var(--sp-3);
 }
 .hero .eyebrow,
@@ -64,7 +67,11 @@
 }
 
 .hero-sub {
-  font-size: var(--fs-lg);
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(1.15rem, 2.2vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 2px;
   color: var(--color-cream-dim);
   max-width: 46ch;
   margin-bottom: var(--sp-4);
