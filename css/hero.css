@@ -24,6 +24,25 @@
   max-width: 720px;
 }
 
+.hero-content > .eyebrow,
+.hero-content > .hero-title,
+.hero-content > .hero-sub,
+.hero-content > .hero-actions {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.hero.is-loaded .hero-content > .eyebrow,
+.hero.is-loaded .hero-content > .hero-title,
+.hero.is-loaded .hero-content > .hero-sub,
+.hero.is-loaded .hero-content > .hero-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero.is-loaded .hero-content > .hero-title { transition-delay: 0.08s; }
+.hero.is-loaded .hero-content > .hero-sub { transition-delay: 0.16s; }
+.hero.is-loaded .hero-content > .hero-actions { transition-delay: 0.24s; }
+
 .hero-title {
   font-size: var(--fs-hero);
   margin-bottom: var(--sp-3);
@@ -96,28 +115,18 @@
   object-position: center center;
   opacity: 0;
   filter: brightness(0.95) saturate(1.05) contrast(1.02);
-  transform: translateY(100%) scale(1.08);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  transform: scale(1.06);
+  transition: opacity 0.9s ease-out;
 }
 
 .hero-image img.is-active {
   opacity: 1;
-  transform: translateY(0) scale(1.08);
-}
-
-.hero-image img.is-previous {
-  opacity: 1;
-  transform: translateY(0) scale(1.02);
-  transition: none;
-}
-
-.hero-image img.is-zooming {
-  animation: hero-zoom 4s ease-out forwards;
+  animation: hero-zoom 6s ease-out forwards;
 }
 
 @keyframes hero-zoom {
-  from { transform: translateY(0) scale(1.08); }
-  to { transform: translateY(0) scale(1.02); }
+  from { transform: scale(1.06); }
+  to { transform: scale(1.02); }
 }
 
 @keyframes scroll-hint {

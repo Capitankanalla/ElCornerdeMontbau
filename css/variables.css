@@ -5,15 +5,15 @@
   /* Colors */
   --color-charcoal: #f0ede5;
   --color-charcoal-2: #241b17;
-  --color-charcoal-3: #2e221c;
-  --color-ember: #58c12e;
-  --color-ember-light: #42db64;
-  --color-gold: #58c12e;
-  --color-gold-light: #42db64;
-  --color-cream: #241b17;
-  --color-cream-dim: #2e221c;
-  --color-stone: #8a7a6d;
-  --color-stone-dark: #f1e3d9;
+  --color-charcoal-3: #33251e;
+  --color-ember: #287a20;
+  --color-ember-light: #287a20;
+  --color-gold: #8a5a00;
+  --color-gold-light: #a36b00;
+  --color-cream: #f4eee6;
+  --color-cream-dim: #ded5ca;
+  --color-stone: #5b514a;
+  --color-stone-dark: #403832;
 
   /* Typography */
   --font-display: "Fraunces", Georgia, serif;

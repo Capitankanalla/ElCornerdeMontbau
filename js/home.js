@@ -76,19 +76,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     let hasRenderedSlide = false;
     let slideTimer = null;
     const slideTransitionDuration = 900;
-    const zoomDuration = 4000;
+    const slideDisplayDuration = 6000;
 
-    heroImage.classList.add("is-active");
-
-    const startZoomAndSchedule = () => {
-      activeHeroImage.classList.remove("is-zooming");
-      void activeHeroImage.offsetWidth;
-      activeHeroImage.classList.add("is-zooming");
+    const scheduleNextSlide = () => {
       clearTimeout(slideTimer);
       slideTimer = setTimeout(() => {
         currentSlide = (currentSlide + 1) % heroSlides.length;
         renderSlide(currentSlide);
-      }, zoomDuration);
+      }, slideDisplayDuration);
     };
 
     const renderSlide = (index) => {
@@ -99,18 +94,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       image.onload = () => {
         if (!hasRenderedSlide) {
           activeHeroImage.src = slide.image;
+          activeHeroImage.classList.add("is-active");
           heroEyebrow.innerHTML = `<span class="ember-dot"></span> ${slide.eyebrow}`;
           heroTitle.textContent = slide.title;
           heroSub.textContent = slide.text;
           hasRenderedSlide = true;
-          startZoomAndSchedule();
+          document.querySelector(".hero").classList.add("is-loaded");
+          scheduleNextSlide();
           return;
         }
 
         inactiveHeroImage.src = slide.image;
         inactiveHeroImage.classList.add("is-active");
-        activeHeroImage.classList.remove("is-zooming");
-        activeHeroImage.classList.add("is-previous");
         activeHeroImage.classList.remove("is-active");
         const previousHeroImage = activeHeroImage;
         [activeHeroImage, inactiveHeroImage] = [inactiveHeroImage, activeHeroImage];
@@ -129,8 +124,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }, 650);
 
         setTimeout(() => {
-          previousHeroImage.classList.remove("is-previous");
-          startZoomAndSchedule();
+          scheduleNextSlide();
         }, slideTransitionDuration);
       };
       image.src = slide.image;
