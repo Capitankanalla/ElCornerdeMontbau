@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("carta-eyebrow").textContent = content.carta.eyebrow;
   document.getElementById("carta-title").textContent = content.carta.title;
   document.getElementById("carta-description").textContent = content.carta.description;
+  document.getElementById("carta-home-link").textContent = content.nav.home;
   mountLayout("carta");
 
   const tabsMount = document.getElementById("tabs-mount");
