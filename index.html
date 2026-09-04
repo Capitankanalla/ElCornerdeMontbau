@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Córner de Montbau — Gastronomía Argentina en Barcelona</title>
-  <meta name="description"
-    content="Cortes argentinos a la parrilla, empanadas santiagueñas y pizza a la piedra en el corazón de Montbau, Barcelona." />
+  <title></title>
+  <meta name="description" content="" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
@@ -28,24 +27,23 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-image">
-        <img id="hero-image" src="imgs/hero.webp" alt="El Córner de Montbau">
+        <img id="hero-image" src="imgs/hero.webp" alt="">
         <img id="hero-image-next" alt="" aria-hidden="true">
       </div>
 
       <div class="container hero-content">
-        <p class="eyebrow"><span class="ember-dot"></span> Desde 2010 en Montbau</p>
-        <h1 class="hero-title">Lo tenemos <em>todo</em>.</h1>
-        <p class="hero-sub">La calidad de nuestros platos, una zona tranquila y un servicio esmerado. La combinación
-          perfecta de la Argentina más auténtica en Barcelona.</p>
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 class="hero-title"></h1>
+        <p class="hero-sub"></p>
 
         <div class="hero-actions">
-          <a href="html/menu-dia.html" class="btn btn-primary">Menú del día</a>
-          <a href="html/carta.html" class="btn btn-secondary">Ver la carta</a>
+          <a href="html/menu-dia.html" class="btn btn-primary" id="hero-menu-link"></a>
+          <a href="html/carta.html" class="btn btn-secondary" id="hero-carta-link"></a>
         </div>
       </div>
 
       <div class="hero-scroll-hint">
-        <span>Descubre</span>
+        <span id="discover-label"></span>
         <span class="line"></span>
       </div>
     </section>
@@ -56,10 +54,10 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">Los Clásicos</p>
-            <h2>Lo que nos define</h2>
+            <p class="eyebrow" id="classics-eyebrow"></p>
+            <h2 id="classics-title"></h2>
           </div>
-          <p class="lead">Tres pilares de nuestra cocina, tal y como se cocinan en Argentina.</p>
+          <p class="lead" id="classics-lead"></p>
         </div>
         <div class="classics-grid" id="classics-mount"></div>
       </div>
@@ -69,8 +67,8 @@
     <section class="section section-compact" id="nosotros">
       <div class="container about-grid reveal">
         <div>
-          <p class="eyebrow">Nosotros</p>
-          <h2>De Santiago del Estero a Montbau</h2>
+            <p class="eyebrow" id="about-eyebrow"></p>
+            <h2 id="about-title"></h2>
         </div>
         <div class="about-text" id="about-mount"></div>
       </div>
@@ -81,15 +79,15 @@
       <div class="container">
         <div class="info-strip reveal">
           <div class="info-item">
-            <p class="eyebrow">Horario</p>
-            <p>Todos los días<br />13:00–16:00 y 20:00–23:30</p>
+            <p class="eyebrow" id="hours-label"></p>
+            <p id="schedule-mount"></p>
           </div>
           <div class="info-item">
-            <p class="eyebrow">Ubicación</p>
+            <p class="eyebrow" id="location-label"></p>
             <p id="address-mount"></p>
           </div>
           <div class="info-item">
-            <p class="eyebrow">Reservas</p>
+            <p class="eyebrow" id="reservations-label"></p>
             <p id="phone-mount"></p>
           </div>
         </div>
@@ -100,13 +98,13 @@
     <section class="section" id="contacto">
       <div class="container contact-box reveal">
         <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>¿Reservamos tu mesa?</h2>
-          <p class="lead">Escríbenos o llámanos, y te tendremos la brasa lista.</p>
+          <p class="eyebrow" id="contact-eyebrow"></p>
+          <h2 id="contact-title"></h2>
+          <p class="lead" id="contact-text"></p>
         </div>
         <div class="hero-actions">
-          <a href="#" id="phone-cta" class="btn btn-primary">Llamar ahora</a>
-          <a href="carta.html" class="btn btn-secondary">Ver la carta</a>
+          <a href="#" id="phone-cta" class="btn btn-primary"></a>
+          <a href="carta.html" id="contact-menu-link" class="btn btn-secondary"></a>
         </div>
       </div>
     </section>
@@ -114,6 +112,7 @@
 
   <div id="footer-mount"></div>
 
+  <script src="js/content.js"></script>
   <script src="data/carta-data.js"></script>
   <script src="js/layout.js"></script>
   <script src="js/reveal.js"></script>

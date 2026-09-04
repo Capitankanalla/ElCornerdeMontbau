@@ -1,0 +1,248 @@
+INVENTARI DE TEXTOS HARDCODED DE LA VISTA WEB
+================================================
+
+Objectiu
+--------
+Inventari dels textos que es mostren al navegador o formen part de la informació textual de la pàgina i que estan escrits directament en fitxers HTML o JavaScript. Les referències amb "duplicat" indiquen textos que també apareixen en un altre fitxer.
+
+No inclòs
+---------
+- Fitxers .txt i .md del projecte.
+- server.js.
+- Comentaris, noms de variables, claus tècniques, identificadors, URLs, classes, missatges de consola i textos interns del generador que no es mostren a l'usuari.
+- js/json/homeEs.json: ja és un fitxer JSON externalitzat, no un text hardcoded.
+
+
+1. index.html
+-------------
+
+Metadades i accessibilitat:
+- Title: El Córner de Montbau — Gastronomía Argentina en Barcelona
+- Description: Cortes argentinos a la parrilla, empanadas santiagueñas y pizza a la piedra en el corazón de Montbau, Barcelona.
+- Alt de la imatge principal: El Córner de Montbau
+
+Contingut visible:
+- Desde 2010 en Montbau
+- Lo tenemos todo.
+- La calidad de nuestros platos, una zona tranquila y un servicio esmerado. La combinación perfecta de la Argentina más auténtica en Barcelona.
+- Menú del día
+- Ver la carta
+- Descubre
+- Los Clásicos
+- Lo que nos define
+- Tres pilares de nuestra cocina, tal y como se cocinan en Argentina.
+- Nosotros
+- De Santiago del Estero a Montbau
+- Horario
+- Todos los días / 13:00–16:00 y 20:00–23:30
+- Ubicación
+- Reservas
+- Contacto
+- ¿Reservamos tu mesa?
+- Escríbenos o llámanos, y te tendremos la brasa lista.
+- Llamar ahora
+- Ver la carta
+
+
+2. html/carta.html
+------------------
+
+Metadades:
+- Title: Carta — El Córner de Montbau
+
+Contingut visible:
+- Nuestra Carta
+- Todo lo que tenemos
+- Cortes argentinos, empanadas santiagueñas, pizza a la piedra y mucho más.
+
+
+3. html/menu-dia.html
+---------------------
+
+Metadades:
+- Title: Menú del día — El Córner de Montbau
+
+Contingut visible:
+- Menú de hoy
+- Menú del día
+- Entrante, plato principal y postre, seleccionados hoy de entre nuestra carta.
+- Prototipo del generador: en producción, este menú lo compone automáticamente un backend ligero cada semana, evitando repetir platos recientes.
+- Generar otro (demo)
+- Ver la carta completa
+
+
+4. html/qr.html
+---------------
+
+Metadades:
+- Title: El Córner de Montbau — ¿Qué te apetece hoy?
+
+Contingut visible:
+- EL CÓRNER DE MONTBAU
+- Estás en nuestra mesa
+- ¿Qué te apetece hoy?
+- Menú del día
+- Rápido y cambia cada día
+- Carta
+- Toda nuestra oferta
+- Conocer el restaurante
+- Icona del menú: 🍲
+- Icona de la carta: 📖
+
+
+5. js/layout.js
+---------------
+
+Capçalera i navegació:
+- Inicio
+- Menú del día
+- Carta
+- Nosotros
+- Contacto
+- EL CÓRNER DE MONTBAU
+- Abrir menú (aria-label)
+- Telèfon: +34 93 428 21 71 (reutilitzat des de RESTAURANT_INFO)
+- Adreça: Plaça de Zurbarán, 1, 08035 Barcelona (reutilitzada des de RESTAURANT_INFO)
+
+Peu de pàgina:
+- El Córner de Montbau
+- Auténtica gastronomía argentina en el corazón de Montbau: cortes a la parrilla, empanadas santiagueñas y pizza a la piedra.
+- Contacto
+- Horario
+- Todos los días · 13:00–16:00 y 20:00–23:30
+- Ver la carta
+- Ver menú del día
+- © [any actual] El Córner de Montbau
+- Demo MVP — refactor sin WordPress
+
+
+6. js/menu-dia.js
+-----------------
+
+Etiquetes de les targetes del menú:
+- Entrante
+- Principal
+- Postre
+- De nuestra sección [categoria del plat]
+
+El nom i la descripció del plat provenen de data/carta-data.js.
+
+
+7. data/carta-data.js
+---------------------
+
+Categories, notes, noms de plats, descripcions i preus que es mostren a carta i menú del dia. El camp menuDia és tècnic i no és text visible.
+
+Categoria Entrantes:
+- Queso provolone al horno con tomate seco y albahaca — 8.90€
+- Queso provolone con tomate natural y anchoas — 9.90€
+- Tabla de Quesos — 11.90€
+- Patatas Bravas — 4.90€
+- Empanadas Argentinas D.O. Santiagueñas — De carne suave · De carne picante · De pollo · De mozzarella y cebolla · De jamón y queso · De tomate, mozzarella y albahaca · De callos con sofrito de cebolla y pimiento · Capresse · Humita. — 3.50€ /ud
+- Empanadas Argentinas de Chorizo y Provolone — 4.00€ /ud
+
+Categoria Ensaladas:
+- Ensalada Córner — Mezclum, queso de cabra, miel, pasas y nueces. — 9.90€
+- Ensalada Tibia — Salteado de verduras con bacon, frutos secos y queso de cabra fundido. — 9.90€
+- Ensalada César — Mezclum, pollo, tomates cherry, picatostes y salsa César. — 10.90€
+- Ensalada tropical — Mix de lechuga, pollo, piña, pasas, salsa rosa. — 8.90€
+- Ensalada verde — 7.90€
+- Ensalada de salmón — Escarola, canónigos, virutas de cebolla, salmón ahumado y queso de Burgos. — 11.90€
+- Ensalada especial caprese — Tomate, mozzarella de búfala, albahaca y reducción de menta. — 10.90€
+- Ensalada de rúcula — Crujiente de jamón y de cebolla, parmesano. — 9.90€
+
+Categoria Carnes:
+- Nota: Todas nuestras carnes se acompañan con guarnición. Pide tu salsa extra Gorgonzola o Cinco Pimientas (suplemento 3.00€).
+- Solomillo de ternera — La parte más tierna de nuestras carnes. — 25.90€
+- Vacío — Corte ubicado entre las costillas falsas y los huecos de las caderas, le da su textura peculiar. — 17.90€
+- Butifarra Pagés con sanfaina — Típico plato catalán. — 10.50€
+- Milanesa napolitana — Salsa de tomate, queso, jamón dulce y rodajas de tomate. — 16.90€
+- Milanesa suiza — 16.90€
+- Suprema de pollo Suiza — Nata, mozzarella y cebolla caramelizada. — 15.90€
+- Suprema de pollo con patatas — Pollo macerado y empanado, al horno, servido con patatas. — 10.90€
+- Entrecot de Girona (400 gr) — Pieza de lomo alto de ternera de Girona. — 25.90€
+- Entraña de ternera — El más clásico y sabroso corte argentino. — 17.90€
+- Churrasco Argentino "asado de tira" — El clásico asado de tira argentino. — 17.90€
+- 1/2 Pollo a la Brasa — Sabroso pollo a la brasa con sus patatas caseras. — 10.90€
+- Milanesa de ternera con patatas — Macerada y empanada, al horno, servida con patatas. — 11.90€
+- Suprema de pollo napolitana — Salsa de tomate, queso, jamón dulce y rodajas de tomate. — 15.90€
+
+Categoria Pizzas:
+- Nota: Ingrediente extra 2.50€
+- Pizza especial de Rúcula — Tomate, mozzarella, rúcula, parmesano y virutas de jamón serrano. — 13.90€
+- Pizza Marinera — Tomate, mozzarella, atún, gambas, palitos de cangrejo y orégano. — 14.90€
+- Pizza 4 Quesos — Tomate, mozzarella, queso de cabra, brie y gorgonzola. — 12.90€
+- Pizza Especial El Córner — Jamón país, bacon, nata, cebolla, maíz, mozzarella. — 14.90€
+- Pizza Americana (barbacoa) — Tomate, mozzarella, pollo, cebolla y pimiento escalibado. — 13.90€
+- Pizza Catalana — Tomate, mozzarella, butifarra, ajo y orégano. — 12.90€
+- Pizza Atún escalibado — Tomate natural, cebolla, pimiento escalibado y atún natural. — 13.90€
+- Pizza Pepperoni — Tomate, mozzarella, pepperoni y orégano. — 11.90€
+- Pizza Margarita — Tomate, mozzarella y orégano. — 10.90€
+- Pizza Noruega — Tomate, mozzarella, cebolla y salmón. — 15.50€
+- Pizza Mexicana — Tomate, mozzarella, carne, bacon, maíz y un toque de picante. — 13.90€
+- Pizza Carbonara — Salsa carbonara, mozzarella y cebolla. — 13.90€
+- Pizza Napolitana — Tomate, mozzarella, anchoas, tomate natural y parmesano. — 13.90€
+- Pizza Mallorquina — Tomate, mozzarella, queso de cabra, sobrasada de Mallorca y miel. — 13.90€
+- Pizza Hawaiana — Tomate, mozzarella, jamón york, piña. — 11.90€
+- Pizza Vegetal — Tomate, mozzarella y verduras de estación. — 11.90€
+- Pizza Jamón champi — Tomate, mozzarella, champiñones, jamón york y huevo. — 12.50€
+- Pizza Prosciutto — Tomate, mozzarella, jamón york y orégano. — 11.50€
+- Pizza del país — Tomate natural picado, mozzarella, jamón del país, ajo y aceite. — 14.40€
+
+Categoria Pastas:
+- Nota: Pide tu salsa (suplemento 3.00€): Crema de Gorgonzola, Pesto genovés, Salsa de Mariscos, Boloñesa, Carbonara, Napolitana.
+- Canelones Argentinos — 10.90€
+- Cinta Argentina — 8.90€
+- Tortelini de ricota y espinaca — 10.50€
+- Lasaña de carne — 10.90€
+- Espaguetis Napolitana — 8.90€
+- Girasol de queso y nueces — 10.50€
+
+Categoria Postres:
+- Nota: Suplemento dulce de leche o nata 1.00€
+- Tiramisú Artesano — 6.90€
+- Tarta de la casa — 5.90€
+- Crepe de Nutella — 6.90€
+- Crepe de dulce de leche — Panqueque Argentino. — 6.90€
+
+
+8. data/carta-data.js — contingut de la pàgina d'inici
+-------------------------------------------------------
+
+Blocs de "Los Clásicos":
+- Empanadas / Los Clásicos / Carne suave o picante, mozzarella y cebolla, jamón y queso. Y... alguna sorpresita.
+- Cortes Argentinos / Los Clásicos / Trabajamos, básicamente, tres cortes: entraña, vacío y asado de tira.
+- Milanesas / Los Clásicos / Disfruta de nuestras especialidades: napolitana, suiza y clásica.
+
+Informació del restaurant:
+- El Córner de Montbau
+- +34 93 428 21 71
+- Plaça de Zurbarán, 1, 08035 Barcelona
+- La historia de El Córner de Montbau se sitúa a miles de kilómetros de aquí, en la tierra donde nace nuestra empanada santiagueña: Santiago del Estero.
+- Ángel cruza el charco con un propósito en mente: conquistar la Barcelona gastronómica con la Argentina más auténtica, a base de conocimiento, calidad y esfuerzo.
+- Tras varios años conociendo la ciudad, sus gentes y sus gustos, en 2010 consigue poner en marcha su sueño: ofrecer los mejores cortes argentinos y las auténticas empanadas santiagueñas, además de genuinas pizzas a la piedra, milanesas y supremas.
+- Hoy, El Córner de Montbau ofrece los mejores platos argentinos, con nuestro menú actualizado diariamente y las pizzas cocinadas en horno a la piedra.
+
+
+9. data/site-content.js
+-----------------------
+
+Aquest fitxer ja actua com a catàleg de continguts, però continua sent JavaScript i per això també és un origen de textos 
+hardcoded si l'objectiu és migrar-ho tot a JSON. Conté:
+
+- Metadades: El Córner de Montbau — Gastronomía Argentina en Barcelona; Cortes argentinos a la parrilla, empanadas santiagueñas y pizza a la piedra en el corazón de Montbau, Barcelona.; Carta — El Córner de Montbau; Menú del día — El Córner de Montbau; El Córner de Montbau — ¿Qué te apetece hoy?
+- Navegació: Inicio, Menú del día, Carta, Nosotros, Contacto, Abrir menú.
+- Restaurant: El Córner de Montbau, +34 93 428 21 71, Plaça de Zurbarán, 1, 08035 Barcelona.
+- Horari: Todos los días<br>13:00–16:00 y 20:00–23:30.
+- Història: els quatre paràgrafs enumerats a l'apartat 8.
+- Hero: Desde 2010 en Montbau; Lo tenemos todo.; La calidad de nuestros platos, una zona tranquila y un servicio esmerado. La combinación perfecta de la Argentina más auténtica en Barcelona.
+- Hero: Auténtica cocina argentina; El sabor de Argentina.; Carnes a la parrilla, empanadas y recetas que nos llevan directamente a nuestra tierra.
+- Hero: Una historia que continúa; De Santiago del Estero a Montbau.; Una cocina hecha con tradición, producto y ganas de hacerte sentir como en casa.
+- Inici: Menú del día, Ver la carta, Descubre, Los Clásicos, Lo que nos define, Tres pilares de nuestra cocina, tal y como se cocinan en Argentina., Nosotros, De Santiago del Estero a Montbau, Horario, Ubicación, Reservas, Contacto, ¿Reservamos tu mesa?, Escríbenos o llámanos, y te tendremos la brasa lista., Llamar ahora i Ver la carta (també enumerats a l'apartat 1).
+- Carta: Nuestra Carta, Todo lo que tenemos, Cortes argentinos, empanadas santiagueñas, pizza a la piedra y mucho más.
+- Menú del dia: Menú de hoy, Menú del día, Entrante, plato principal y postre, seleccionados hoy de entre nuestra carta., Prototipo del generador: en producción, este menú lo compone automáticamente un backend ligero cada semana, evitando repetir platos recientes., Generar otro (demo), Ver la carta completa, Entrante, Principal, Postre, De nuestra sección.
+- QR: Estás en nuestra mesa, ¿Qué te apetece hoy?, Menú del día, Rápido y cambia cada día, Carta, Toda nuestra oferta, Conocer el restaurante.
+- Peu: Auténtica gastronomía argentina en el corazón de Montbau: cortes a la parrilla, empanadas santiagueñas y pizza a la piedra., Contacto, Horario, Ver la carta, Ver menú del día, Demo MVP — refactor sin WordPress.
+
+Nota: molts valors d'aquest fitxer dupliquen els de l'HTML, js/layout.js i js/menu-dia.js. En la migració convé mantenir una 
+única font de veritat en JSON.

@@ -1,7 +1,12 @@
 /* ============================================
    CARTA — tabs per categoria
    ============================================ */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  const content = await window.contentReady;
+  document.title = content.meta.cartaTitle;
+  document.getElementById("carta-eyebrow").textContent = content.carta.eyebrow;
+  document.getElementById("carta-title").textContent = content.carta.title;
+  document.getElementById("carta-description").textContent = content.carta.description;
   mountLayout("carta");
 
   const tabsMount = document.getElementById("tabs-mount");

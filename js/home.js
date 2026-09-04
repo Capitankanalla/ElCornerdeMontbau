@@ -2,12 +2,36 @@
    HOME PAGE — pinta les dades dinàmiques
    ============================================ */
 document.addEventListener("DOMContentLoaded", async () => {
+  const content = await window.contentReady;
+  const home = content.home;
+  const restaurant = content.restaurant;
+  const contact = content.contact;
+  document.title = content.meta.homeTitle;
+  document.querySelector('meta[name="description"]').content = content.meta.homeDescription;
+  document.getElementById("hero-image").alt = restaurant.name;
+  document.getElementById("hero-menu-link").textContent = home.heroDailyMenu;
+  document.getElementById("hero-carta-link").textContent = home.heroCarta;
+  document.getElementById("discover-label").textContent = home.discover;
+  document.getElementById("classics-eyebrow").textContent = home.classicsEyebrow;
+  document.getElementById("classics-title").textContent = home.classicsTitle;
+  document.getElementById("classics-lead").textContent = home.classicsLead;
+  document.getElementById("about-eyebrow").textContent = home.aboutEyebrow;
+  document.getElementById("about-title").textContent = home.aboutTitle;
+  document.getElementById("hours-label").textContent = home.hours;
+  document.getElementById("location-label").textContent = home.location;
+  document.getElementById("reservations-label").textContent = home.reservations;
+  document.getElementById("schedule-mount").innerHTML = `${restaurant.schedule}<br>${restaurant.scheduleHours}`;
+  document.getElementById("contact-eyebrow").textContent = contact.eyebrow;
+  document.getElementById("contact-title").textContent = contact.title;
+  document.getElementById("contact-text").textContent = contact.text;
+  document.getElementById("contact-menu-link").textContent = contact.menu;
+
   mountLayout("home");
 
   // Los Clásicos
   const classicsMount = document.getElementById("classics-mount");
   if (classicsMount) {
-    classicsMount.innerHTML = CLASSICS_DATA.map(
+    classicsMount.innerHTML = content.classicsData.map(
       (c) => `
         <div class="classic-card reveal is-visible">
           <p class="tag">${c.tag}</p>
@@ -21,26 +45,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Sobre nosotros
   const aboutMount = document.getElementById("about-mount");
   if (aboutMount) {
-    aboutMount.innerHTML = RESTAURANT_INFO.about.map((p) => `<p>${p}</p>`).join("");
+    aboutMount.innerHTML = restaurant.about.map((p) => `<p>${p}</p>`).join("");
   }
 
   // Contacto / info strip
   const addressMount = document.getElementById("address-mount");
   const phoneMount = document.getElementById("phone-mount");
   const phoneCta = document.getElementById("phone-cta");
-  if (addressMount) addressMount.textContent = RESTAURANT_INFO.address;
-  if (phoneMount) phoneMount.textContent = RESTAURANT_INFO.phone;
+  if (addressMount) addressMount.textContent = restaurant.address;
+  if (phoneMount) phoneMount.textContent = restaurant.phone;
   if (phoneCta) {
-    phoneCta.textContent = RESTAURANT_INFO.phone;
-    phoneCta.href = `tel:${RESTAURANT_INFO.phone.replace(/\s/g, "")}`;
+    phoneCta.textContent = restaurant.phone;
+    phoneCta.href = `tel:${restaurant.phone.replace(/\s/g, "")}`;
   }
 
   try {
-    const response = await fetch("js/json/homeEs.json");
-    if (!response.ok) throw new Error(`Error carregant el JSON del hero: ${response.status}`);
-
-    const data = await response.json();
-    const heroSlides = Array.isArray(data.hero) ? data.hero : [];
+    const heroSlides = Array.isArray(content.hero) ? content.hero : [];
 
     if (!heroSlides.length) return;
 

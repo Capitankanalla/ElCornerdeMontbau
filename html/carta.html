@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta — El Córner de Montbau</title>
+  <title></title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/variables.css" />
@@ -20,9 +20,9 @@
   <main>
     <section class="section-compact">
       <div class="container">
-        <p class="eyebrow">Nuestra Carta</p>
-        <h1>Todo lo que tenemos</h1>
-        <p class="lead" style="color: var(--color-stone); max-width: 50ch; margin-bottom: var(--sp-4);">Cortes argentinos, empanadas santiagueñas, pizza a la piedra y mucho más.</p>
+        <p class="eyebrow" id="carta-eyebrow"></p>
+        <h1 id="carta-title"></h1>
+        <p class="lead" id="carta-description" style="color: var(--color-stone); max-width: 50ch; margin-bottom: var(--sp-4);"></p>
 
         <div class="tabs" id="tabs-mount" role="tablist"></div>
         <div id="panels-mount"></div>
@@ -32,6 +32,7 @@
 
   <div id="footer-mount"></div>
 
+  <script src="../js/content.js"></script>
   <script src="../data/carta-data.js"></script>
   <script src="../js/layout.js"></script>
   <script src="../js/carta.js"></script>

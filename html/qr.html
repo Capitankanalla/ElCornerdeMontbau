@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Córner de Montbau — ¿Qué te apetece hoy?</title>
+  <title></title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/variables.css" />
@@ -12,24 +12,26 @@
 </head>
 <body>
   <main class="qr-select">
-    <div class="logo">EL CÓRNER <span style="color: var(--color-ember-light)">DE MONTBAU</span></div>
-    <p class="eyebrow"><span class="ember-dot"></span> Estás en nuestra mesa</p>
-    <h1 style="margin:0">¿Qué te apetece hoy?</h1>
+    <div class="logo" id="qr-logo"></div>
+    <p class="eyebrow"><span class="ember-dot"></span> <span id="qr-eyebrow"></span></p>
+    <h1 id="qr-title" style="margin:0"></h1>
 
     <div class="qr-choices">
       <a href="menu-dia.html" class="qr-choice">
-        <span class="icon">🍲</span>
-        <h3>Menú del día</h3>
-        <p style="margin:0; font-size: var(--fs-sm); color: var(--color-stone)">Rápido y cambia cada día</p>
+        <span class="icon" id="daily-menu-icon"></span>
+        <h3 id="qr-daily-menu"></h3>
+        <p id="qr-daily-menu-description" style="margin:0; font-size: var(--fs-sm); color: var(--color-stone)"></p>
       </a>
       <a href="carta.html" class="qr-choice">
-        <span class="icon">📖</span>
-        <h3>Carta</h3>
-        <p style="margin:0; font-size: var(--fs-sm); color: var(--color-stone)">Toda nuestra oferta</p>
+        <span class="icon" id="carta-icon"></span>
+        <h3 id="qr-carta"></h3>
+        <p id="qr-carta-description" style="margin:0; font-size: var(--fs-sm); color: var(--color-stone)"></p>
       </a>
     </div>
 
-    <a href="index.html" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-stone); text-transform: uppercase; letter-spacing: 0.08em;">Conocer el restaurante →</a>
+    <a href="index.html" id="qr-restaurant" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-stone); text-transform: uppercase; letter-spacing: 0.08em;"></a>
   </main>
+  <script src="../js/content.js"></script>
+  <script src="../js/qr.js"></script>
 </body>
 </html>

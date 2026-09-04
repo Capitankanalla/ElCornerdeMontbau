@@ -9,12 +9,16 @@
    ============================================ */
 
 function renderHeader(activePage) {
+  const content = HOME_CONTENT;
+  const nav = content.nav;
+  const restaurant = content.restaurant;
+  const logoName = restaurant.name.toUpperCase().split(" DE ");
   const links = [
-    { href: "index.html", label: "Inicio", key: "home" },
-    { href: "menu-dia.html", label: "Menú del día", key: "menu-dia" },
-    { href: "carta.html", label: "Carta", key: "carta" },
-    { href: "index.html#nosotros", label: "Nosotros", key: "nosotros" },
-    { href: "index.html#contacto", label: "Contacto", key: "contacto" }
+    { href: "index.html", label: nav.home, key: "home" },
+    { href: "menu-dia.html", label: nav.dailyMenu, key: "menu-dia" },
+    { href: "carta.html", label: nav.carta, key: "carta" },
+    { href: "index.html#nosotros", label: nav.about, key: "nosotros" },
+    { href: "index.html#contacto", label: nav.contact, key: "contacto" }
   ];
 
   const linksHtml = links
@@ -27,9 +31,9 @@ function renderHeader(activePage) {
   return `
     <header class="site-header">
       <div class="container">
-        <a href="index.html" class="logo">EL CÓRNER <span>DE MONTBAU</span></a>
-        <a href="tel:${RESTAURANT_INFO.phone.replace(/\s/g, "")}" class="btn btn-outline header-cta">${RESTAURANT_INFO.phone}</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Abrir menú">
+        <a href="index.html" class="logo"><strong>${logoName[0]} DE&nbsp;<span>${logoName[1]}</span></strong></a>
+        <a href="tel:${restaurant.phone.replace(/\s/g, "")}" class="btn btn-outline header-cta">${restaurant.phone}</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="${nav.openMenu}">
           <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
       </div>
@@ -40,9 +44,9 @@ function renderHeader(activePage) {
           ${links.map((l) => `<li><a href="${l.href}" class="${l.key === activePage ? "is-active" : ""}">${l.label}</a></li>`).join("")}
         </ul>
         <div class="nav-meta">
-          <span>${RESTAURANT_INFO.phone}</span>
+          <span>${restaurant.phone}</span>
           <span>&middot;</span>
-          <span>${RESTAURANT_INFO.address}</span>
+          <span>${restaurant.address}</span>
         </div>
       </nav>
     </div>
@@ -50,29 +54,32 @@ function renderHeader(activePage) {
 }
 
 function renderFooter() {
+  const content = HOME_CONTENT;
+  const restaurant = content.restaurant;
+  const footer = content.footer;
   return `
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>El Córner de Montbau</h4>
-            <p>Auténtica gastronomía argentina en el corazón de Montbau: cortes a la parrilla, empanadas santiagueñas y pizza a la piedra.</p>
+            <h4>${restaurant.name}</h4>
+            <p>${footer.description}</p>
           </div>
           <div class="footer-col">
-            <h4>Contacto</h4>
-            <a href="tel:${RESTAURANT_INFO.phone.replace(/\s/g, "")}">${RESTAURANT_INFO.phone}</a>
-            <p>${RESTAURANT_INFO.address}</p>
+            <h4>${footer.contact}</h4>
+            <a href="tel:${restaurant.phone.replace(/\s/g, "")}">${restaurant.phone}</a>
+            <p>${restaurant.address}</p>
           </div>
           <div class="footer-col">
-            <h4>Horario</h4>
-            <p>Todos los días · 13:00–16:00 y 20:00–23:30</p>
-            <a href="carta.html">Ver la carta</a>
-            <a href="menu-dia.html">Ver menú del día</a>
+            <h4>${footer.hours}</h4>
+            <p>${restaurant.schedule} · ${restaurant.scheduleHours}</p>
+            <a href="carta.html">${footer.menu}</a>
+            <a href="menu-dia.html">${footer.dailyMenu}</a>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© ${new Date().getFullYear()} El Córner de Montbau</span>
-          <span>Demo MVP — refactor sin WordPress</span>
+          <span>© ${new Date().getFullYear()} ${restaurant.name}</span>
+          <span>${footer.demo}</span>
         </div>
       </div>
     </footer>
