@@ -18,8 +18,8 @@
     "name": "El Córner de Montbau",
     "phone": "Llamanos al: 934 282 171",
     "address": "Plaça de Zurbarán, 1, 08035 Barcelona",
-    "schedule": "Todos los días",
-    "scheduleHours": "13:00–16:00 y 20:00–23:30",
+    "schedule": "De lunes a domingo",
+    "scheduleHours": "09:00 a 0:00 h.",
     "about": [
       "La historia de El Córner de Montbau se sitúa a miles de kilómetros de aquí, en la tierra donde nace nuestra empanada santiagueña: Santiago del Estero.",
       "Ángel cruza el charco con un propósito en mente: conquistar la Barcelona gastronómica con la Argentina más auténtica, a base de conocimiento, calidad y esfuerzo.",
@@ -49,15 +49,15 @@
     },
     {
       "image": "imgs/hero1.webp",
-      "eyebrow": "Auténtica cocina argentina",
-      "title": "El sabor de Argentina.",
-      "text": "Carnes a la parrilla, empanadas y recetas que nos llevan directamente a nuestra tierra."
+      "eyebrow": "Horario de atención al público:",
+      "title": "ABIERTO 363 DÍAS AL AÑO",
+      "text": "De lunes a domingo de 09:00 a 00:00h."
     },
     {
       "image": "imgs/hero2.webp",
       "eyebrow": "Una historia que continúa",
-      "title": "De Santiago del Estero a Montbau.",
-      "text": "Una cocina hecha con tradición, producto y ganas de hacerte sentir como en casa."
+      "title": "NO TE LO PIENSES.",
+      "text": "Visitanos y descubre:"
     }
   ],
   "classics": {

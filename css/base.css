@@ -19,7 +19,15 @@ body {
 
 img { max-width: 100%; display: block; }
 
-h1, h2, h3, h4 {
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.02;
+  margin: 0 0 var(--sp-3);
+  color: var(--color-cream);
+}
+
+ h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.1;
