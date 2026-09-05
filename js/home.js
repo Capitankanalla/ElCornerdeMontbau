@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const heroEyebrow = document.querySelector(".hero .eyebrow");
     const heroTitle = document.querySelector(".hero-title");
     const heroSub = document.querySelector(".hero-sub");
-    const heroCopy = [heroEyebrow, heroTitle, heroSub];
+    const heroColumns = document.getElementById("hero-columns");
+    const heroCopy = [heroEyebrow, heroTitle, heroSub, heroColumns];
     let activeHeroImage = heroImage;
     let inactiveHeroImage = nextHeroImage;
     let hasRenderedSlide = false;
@@ -88,7 +89,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const renderSlide = (index) => {
       const slide = heroSlides[index];
-      if (!slide || !activeHeroImage || !inactiveHeroImage || !heroEyebrow || !heroTitle || !heroSub) return;
+      if (!slide || !activeHeroImage || !inactiveHeroImage || !heroEyebrow || !heroTitle || !heroSub || !heroColumns) return;
+
+      const renderColumns = () => {
+        heroColumns.innerHTML = Array.isArray(slide.columns)
+          ? slide.columns.map((column) => `
+              <div class="hero-column">
+                <p class="eyebrow">${column.eyebrow}</p>
+                <h2>${column.title}</h2>
+              </div>
+            `).join("")
+          : "";
+        heroColumns.classList.toggle("is-visible", Array.isArray(slide.columns) && slide.columns.length > 0);
+      };
 
       const image = new Image();
       image.onload = () => {
@@ -98,6 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           heroEyebrow.innerHTML = `<span class="ember-dot"></span> ${slide.eyebrow}`;
           heroTitle.textContent = slide.title;
           heroSub.textContent = slide.text;
+          renderColumns();
           hasRenderedSlide = true;
           document.querySelector(".hero").classList.add("is-loaded");
           scheduleNextSlide();
@@ -117,6 +131,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             heroEyebrow.innerHTML = `<span class="ember-dot"></span> ${slide.eyebrow}`;
             heroTitle.textContent = slide.title;
             heroSub.textContent = slide.text;
+            renderColumns();
             requestAnimationFrame(() => {
               heroCopy.forEach((element) => element.classList.remove("is-changing"));
             });
