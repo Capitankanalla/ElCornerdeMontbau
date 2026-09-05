@@ -76,7 +76,7 @@
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: 2px;
-  color: var(--color-cream-dim);
+  color: var(--color-cream);
   max-width: 46ch;
   margin-bottom: var(--sp-4);
 }
@@ -90,9 +90,10 @@
 .hero-columns.is-visible { display: grid; }
 .hero-column .eyebrow {
   margin-bottom: var(--sp-1);
-  color: var(--color-gold-light);
+  color: var(--color-ember-light);
 }
 .hero-column h2 {
+  font-family: "Gloria Hallelujah", cursive;
   font-size: 1.15rem;
   line-height: 1.15;
   margin: 0;
