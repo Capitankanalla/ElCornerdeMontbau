@@ -192,26 +192,6 @@
 .qr-choice .icon { font-size: 2.2rem; }
 .qr-choice h3 { margin: 0; font-size: 1.2rem; }
 
-/* --- Generator panel (demo del "backend lleuger") --- */
-.generator-panel {
-  background: var(--color-charcoal-2);
-  border: 1px solid rgba(201,162,39,0.3);
-  border-radius: var(--radius-md);
-  padding: var(--sp-3) var(--sp-4);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--sp-3);
-  flex-wrap: wrap;
-  margin-bottom: var(--sp-5);
-}
-.generator-panel .note {
-  font-size: var(--fs-xs);
-  color: var(--color-stone);
-  font-family: var(--font-mono);
-  max-width: 46ch;
-}
-
 /* --- Badge "hoy" --- */
 .badge-today {
   display: inline-flex;

@@ -42,19 +42,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("daily-menu-title").textContent = labels.title;
   document.getElementById("daily-menu-description").textContent = labels.description;
   document.getElementById("daily-menu-home-link").textContent = content.nav.home;
-  document.getElementById("prototype-note").textContent = labels.prototypeNote;
-  document.getElementById("regenerate-btn").textContent = `${labels.regenerateIcon} ${labels.regenerate}`;
   document.getElementById("full-carta-link").textContent = labels.fullCarta;
   mountLayout("menu-dia");
 
   let currentMenu = getOrCreateTodayMenu();
   renderMenuDia(currentMenu);
 
-  const regenBtn = document.getElementById("regenerate-btn");
-  if (regenBtn) {
-    regenBtn.addEventListener("click", () => {
-      currentMenu = forceRegenerateMenu();
-      renderMenuDia(currentMenu);
-    });
-  }
 });
