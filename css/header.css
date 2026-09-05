@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   /* background: rgba(28, 21, 18, 0.88); */
-  background: #363531;
+  background: #55544e;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(138, 122, 109, 0.25);
 }

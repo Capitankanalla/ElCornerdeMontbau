@@ -53,6 +53,7 @@
 .hero .eyebrow,
 .hero-title,
 .hero-sub {
+  font-weight: 600;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 .hero .eyebrow.is-changing,
