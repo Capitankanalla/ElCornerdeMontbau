@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             requestAnimationFrame(() => {
               heroCopy.forEach((element) => element.classList.remove("is-changing"));
             });
-          }, 150);
-        }, 650);
+          }, 100);
+        }, 550);
 
         setTimeout(() => {
           scheduleNextSlide();

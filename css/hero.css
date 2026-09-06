@@ -1,15 +1,19 @@
 /* ============================================
    HERO
    ============================================ */
+
 .hero {
   position: relative;
   min-height: calc(100svh - var(--header-h));
   display: flex;
   align-items: center;
   overflow: hidden;
-  background:
-  var(--color-cream);
+  background: var(--color-cream);
 }
+
+/* ============================================
+   DECORATION
+   ============================================ */
 
 .hero-embers {
   position: absolute;
@@ -18,12 +22,17 @@
   opacity: 0.5;
 }
 
+/* ============================================
+   CONTENT
+   ============================================ */
+
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 720px;
 }
 
+/* Entrada inicial del contingut */
 .hero-content > .eyebrow,
 .hero-content > .hero-title,
 .hero-content > .hero-sub,
@@ -31,8 +40,12 @@
 .hero-content > .hero-actions {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
+
+/* Hero carregat */
 .hero.is-loaded .hero-content > .eyebrow,
 .hero.is-loaded .hero-content > .hero-title,
 .hero.is-loaded .hero-content > .hero-sub,
@@ -41,10 +54,27 @@
   opacity: 1;
   transform: translateY(0);
 }
-.hero.is-loaded .hero-content > .hero-title { transition-delay: 0.08s; }
-.hero.is-loaded .hero-content > .hero-sub { transition-delay: 0.16s; }
-.hero.is-loaded .hero-content > .hero-columns { transition-delay: 0.2s; }
-.hero.is-loaded .hero-content > .hero-actions { transition-delay: 0.24s; }
+
+/* Retards de l'entrada */
+.hero.is-loaded .hero-content > .hero-title {
+  transition-delay: 0.08s;
+}
+
+.hero.is-loaded .hero-content > .hero-sub {
+  transition-delay: 0.16s;
+}
+
+.hero.is-loaded .hero-content > .hero-columns {
+  transition-delay: 0.20s;
+}
+
+.hero.is-loaded .hero-content > .hero-actions {
+  transition-delay: 0.24s;
+}
+
+/* ============================================
+   TITLE
+   ============================================ */
 
 .hero-title {
   font-family: var(--font-display);
@@ -53,22 +83,29 @@
   line-height: 1.02;
   margin-bottom: var(--sp-3);
 }
+
 .hero .eyebrow,
 .hero-title,
 .hero-sub {
   font-weight: 600;
-  transition: opacity 0.15s ease, transform 0.15s ease;
 }
+
+/* Canvi dinàmic de text */
 .hero .eyebrow.is-changing,
 .hero-title.is-changing,
 .hero-sub.is-changing {
   opacity: 0;
   transform: translateY(6px);
 }
+
 .hero-title em {
   font-style: normal;
   color: var(--color-ember-light);
 }
+
+/* ============================================
+   SUBTITLE
+   ============================================ */
 
 .hero-sub {
   font-family: "Gloria Hallelujah", cursive;
@@ -81,32 +118,52 @@
   margin-bottom: var(--sp-4);
 }
 
+/* ============================================
+   COLUMNS
+   ============================================ */
+
 .hero-columns {
   display: none;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--sp-3);
   margin-bottom: var(--sp-4);
 }
-.hero-columns.is-visible { display: grid; }
+
+.hero-columns.is-visible {
+  display: grid;
+}
+
 .hero-column .eyebrow {
   margin-bottom: var(--sp-1);
   color: var(--color-ember-light);
 }
+
 .hero-column h2 {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: 1.15rem;
-  line-height: 1.15;
+  font-size: clamp(1.15rem, 2.2vw, 1.75rem);
+  line-height: 1.35;
   margin: 0;
 }
+
 @media (max-width: 640px) {
-  .hero-columns { grid-template-columns: 1fr; }
+  .hero-columns {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* ============================================
+   ACTIONS
+   ============================================ */
 
 .hero-actions {
   display: flex;
   gap: var(--sp-2);
   flex-wrap: wrap;
 }
+
+/* ============================================
+   SCROLL HINT
+   ============================================ */
 
 .hero-scroll-hint {
   position: absolute;
@@ -123,12 +180,17 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 .hero-scroll-hint .line {
   width: 1px;
   height: 24px;
   background: var(--color-stone);
   animation: scroll-hint 1.8s ease-in-out infinite;
 }
+
+/* ============================================
+   HERO IMAGE
+   ============================================ */
 
 .hero-image {
   position: absolute;
@@ -147,24 +209,18 @@
   object-position: center center;
   opacity: 0;
   filter: brightness(0.95) saturate(1.05) contrast(1.02);
-  transform: scale(1.06);
+  transform: scale(1.00);
   transition: opacity 0.9s ease-out;
 }
 
 .hero-image img.is-active {
   opacity: 1;
-  animation: hero-zoom 6s ease-out forwards;
+  animation: hero-zoom 7s ease-out forwards;
 }
 
-@keyframes hero-zoom {
-  from { transform: scale(1.06); }
-  to { transform: scale(1.02); }
-}
-
-@keyframes scroll-hint {
-  0%, 100% { transform: scaleY(0.4); opacity: 0.4; }
-  50% { transform: scaleY(1); opacity: 1; }
-}
+/* ============================================
+   OVERLAY
+   ============================================ */
 
 .hero::after {
   content: "";
@@ -172,6 +228,57 @@
   inset: 0;
   z-index: 1;
   pointer-events: none;
+  background: rgba(17, 17, 17, 0.35);
 }
 
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.06);
+  }
+
+  to {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > .eyebrow,
+  .hero-content > .hero-title,
+  .hero-content > .hero-sub,
+  .hero-content > .hero-columns,
+  .hero-content > .hero-actions,
+  .hero-image img {
+    transition: none;
+    animation: none;
+  }
+
+  .hero.is-loaded .hero-content > .eyebrow,
+  .hero.is-loaded .hero-content > .hero-title,
+  .hero.is-loaded .hero-content > .hero-sub,
+  .hero.is-loaded .hero-content > .hero-columns,
+  .hero.is-loaded .hero-content > .hero-actions {
+    opacity: 1;
+    transform: none;
+  }
+}
