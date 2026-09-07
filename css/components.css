@@ -5,7 +5,7 @@
 /* --- Section heading --- */
 .section-head {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   gap: var(--sp-3);
   margin-bottom: var(--sp-4);
@@ -34,7 +34,7 @@
   transform: translateY(-6px);
   border-color: var(--color-ember);
 }
-.classic-card h3 { font-size: 1.3rem; margin-bottom: var(--sp-1); }
+.classic-card h3 { font-size: 1.8rem; margin-bottom: var(--sp-1); }
 .classic-card p { font-size: var(--fs-sm); }
 .classic-card .tag {
   font-family: var(--font-mono);

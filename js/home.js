@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("hero-menu-link").textContent = home.heroDailyMenu;
   document.getElementById("hero-carta-link").textContent = home.heroCarta;
   document.getElementById("discover-label").textContent = home.discover;
-  document.getElementById("classics-eyebrow").textContent = home.classicsEyebrow;
   document.getElementById("classics-title").textContent = home.classicsTitle;
   document.getElementById("classics-lead").textContent = home.classicsLead;
   document.getElementById("about-eyebrow").textContent = home.aboutEyebrow;
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     classicsMount.innerHTML = content.classicsData.map(
       (c) => `
         <div class="classic-card reveal is-visible">
-          <p class="tag">${c.tag}</p>
           <h3>${c.title}</h3>
           <p>${c.desc}</p>
         </div>

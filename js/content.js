@@ -1,3 +1,5 @@
+//Carrega els json d'idioma.
+
 const contentPath = window.location.pathname.includes("/html/")
   ? "../js/json/homeEs.json"
   : "js/json/homeEs.json";
