@@ -12,13 +12,14 @@ function renderHeader(activePage) {
   const content = HOME_CONTENT;
   const nav = content.nav;
   const restaurant = content.restaurant;
+  const basePath = window.location.pathname.includes("/html/") ? "../" : "";
   const logoName = restaurant.name.toUpperCase().split(" DE ");
   const links = [
-    { href: "index.html", label: nav.home, key: "home" },
-    { href: "menu-dia.html", label: nav.dailyMenu, key: "menu-dia" },
-    { href: "carta.html", label: nav.carta, key: "carta" },
-    { href: "index.html#nosotros", label: nav.about, key: "nosotros" },
-    { href: "index.html#contacto", label: nav.contact, key: "contacto" }
+    { href: `${basePath}index.html`, label: nav.home, key: "home" },
+    { href: `${basePath}html/menu-dia.html`, label: nav.dailyMenu, key: "menu-dia" },
+    { href: `${basePath}html/carta.html`, label: nav.carta, key: "carta" },
+    { href: `${basePath}index.html#nosotros`, label: nav.about, key: "nosotros" },
+    { href: `${basePath}index.html#contacto`, label: nav.contact, key: "contacto" }
   ];
 
   const linksHtml = links
@@ -31,8 +32,8 @@ function renderHeader(activePage) {
   return `
     <header class="site-header">
       <div class="container">
-        <a href="index.html" class="logo">
-          <img src="imgs/loglECdM.png" alt="${restaurant.name}" class="logo-mark" />
+        <a href="${basePath}index.html" class="logo">
+          <img src="${basePath}imgs/loglECdM.png" alt="${restaurant.name}" class="logo-mark" />
           <strong>${logoName[0]} DE&nbsp;<span>${logoName[1]}</span></strong>
         </a>
         <a href="tel:${restaurant.phone.replace(/\s/g, "")}" class="btn btn-outline header-cta">
@@ -63,6 +64,7 @@ function renderFooter() {
   const content = HOME_CONTENT;
   const restaurant = content.restaurant;
   const footer = content.footer;
+  const basePath = window.location.pathname.includes("/html/") ? "../" : "";
   return `
     <footer class="site-footer">
       <div class="container">
@@ -79,8 +81,8 @@ function renderFooter() {
           <div class="footer-col">
             <h4>${footer.hours}</h4>
             <p>${restaurant.schedule} · ${restaurant.scheduleHours}</p>
-            <a href="carta.html">${footer.menu}</a>
-            <a href="menu-dia.html">${footer.dailyMenu}</a>
+            <a href="${basePath}html/carta.html">${footer.menu}</a>
+            <a href="${basePath}html/menu-dia.html">${footer.dailyMenu}</a>
           </div>
         </div>
         <div class="footer-bottom">
