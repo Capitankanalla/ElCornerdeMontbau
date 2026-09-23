@@ -32,12 +32,68 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (classicsMount) {
     classicsMount.innerHTML = content.classicsData.map(
       (c) => `
-        <div class="classic-card reveal is-visible">
-          <h3>${c.title}</h3>
-          <p>${c.desc}</p>
-        </div>
+        <button type="button" class="classic-card reveal is-visible" data-title="${c.title}" data-desc="${c.desc}" data-detail="${(c.detail || c.desc).replace(/&/g, '&amp;').replace(/"/g, '&quot;')}">
+          <img class="classic-card__image" src="${c.image}" alt="${c.title}" loading="lazy">
+          <div class="classic-card__content">
+            <h3>${c.title}</h3>
+            <p>${c.desc}</p>
+          </div>
+        </button>
       `
     ).join("");
+
+    const modal = document.createElement("div");
+    modal.id = "classic-modal";
+    modal.className = "classic-modal";
+    modal.setAttribute("aria-hidden", "true");
+    modal.innerHTML = `
+      <div class="classic-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="classic-modal-title">
+        <button type="button" class="classic-modal__close" aria-label="Cerrar">×</button>
+        <div class="classic-modal__content">
+          <h3 id="classic-modal-title"></h3>
+          <p id="classic-modal-text"></p>
+          <button type="button" class="classic-modal__action">Cerrar</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const modalTitle = modal.querySelector("#classic-modal-title");
+    const modalText = modal.querySelector("#classic-modal-text");
+    const closeModalButtons = modal.querySelectorAll(".classic-modal__close, .classic-modal__action");
+
+    const openModal = (card) => {
+      if (!modalTitle || !modalText) return;
+      const detail = (card.dataset.detail || card.dataset.desc || "").replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+      modalTitle.textContent = card.dataset.title || "";
+      modalText.textContent = detail;
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      const dialog = modal.querySelector(".classic-modal__dialog");
+      if (dialog) dialog.scrollTop = 0;
+    };
+
+    classicsMount.querySelectorAll(".classic-card").forEach((card) => {
+      card.addEventListener("click", () => openModal(card));
+      card.setAttribute("aria-label", `Abrir descripción de ${card.dataset.title}`);
+    });
+
+    closeModalButtons.forEach((button) => button.addEventListener("click", closeModal));
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModal();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
   }
 
   // Sobre nosotros
@@ -142,7 +198,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       };
       image.src = slide.image;
     };
-      renderSlide(currentSlide);
+    renderSlide(currentSlide);
   } catch (error) {
     console.error("No s'ha pogut carregar el hero:", error);
   }

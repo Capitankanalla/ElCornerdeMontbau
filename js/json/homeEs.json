@@ -127,17 +127,23 @@
     {
       "title": "Empanadas",
       "tag": "Los Clásicos",
-      "desc": "Carne suave o picante, mozzarella y cebolla, jamón y queso. Y... alguna sorpresita."
+      "desc": "Carne suave o picante, Mozzarella y cebolla, Jamón y queso. Y… alguna sorpresita.",
+      "detail": "Las empanadas tienen su origen en la antigua Persia, llegan a España a través de los árabes, y por vía española llegan a Argentina.\n\nLa tradición de empanada está sobretodo establecida en el norte del país y cada región tiene su propio sello. Obviamente, en EL CÓRNER DE MONTBAU elaboramos las deliciosas empanadas SANTIAGUEÑAS, con las que te queremos trasladar el sabor y el aroma de nuestra tierra.\n\nPara ello ponemos mucha atención en tres puntos clave:\n\nCon el fin de que la carne quede en su punto de jugosidad realizamos el corte a cuchillo.\nLa masa la realizamos con harina, salmuera, grasa y leche.\nY, por último, para que sientan en cada bocado un trozo de Santiago utilizamos especias propias de nuestra tierra.\n\nRealizamos infinidad de empanadas al cabo del día, pero te aseguramos que cada una está hecha con un mimo y trato especial.\n\nNuestras especialidades son:\n\nCarne suave o picante.\nMozzarella y cebolla.\nJamón y queso.\nY… alguna sorpresita.",
+      "image": "imgs/empanadas-pollo.webp"
     },
     {
       "title": "Cortes Argentinos",
       "tag": "Los Clásicos",
-      "desc": "Trabajamos, básicamente, tres cortes: entraña, vacío y asado de tira."
+      "desc": "Trabajamos, básicamente tres cortes: Entraña, Vacío y Asado de tira.",
+      "detail": "Con todos nuestros extensos campos de pasto y los millones de reses transitando y alimentándose en ellos, el placer de degustar la mejor carne no la hemos heredado de ninguno de los pueblos con el que nos hemos mezclado; cuidar, cortar y comer carne es signo de identidad argentino.\n\nEn EL CÓRNER DE MONTBAU trabajamos, básicamente tres cortes:\n\nEntraña. Ubicada en el diafragma, junto a las costillas. Se caracteriza por un intenso sabor y requiere un asado rápido.\n\nVacío. Corte ubicado entre las costillas falsas y los huecos de las caderas. Al ser una carne fibrosa y para obtener su clásico punto de jugosidad es necesario realizar un asado tranquilo y sin prisas, lo que le da su peculiar textura.\n\nAsado de tira. La parte del costillar cortado transversalmente. La grasa infiltrada en su carne y la cercanía al hueso le aporta su característico y apreciado sabor.\n\nImprescindible acompañarlo de nuestro chimichurri.",
+      "image": "imgs/clasico-corte-argentino.webp"
     },
     {
       "title": "Milanesas",
       "tag": "Los Clásicos",
-      "desc": "Disfruta de nuestras especialidades: napolitana, suiza y clásica."
+      "desc": "Disfruta de nuestras especialidades: Napolitana, Suiza y Clásica.",
+      "detail": "Heredadas de las cotolettas italianas, hemos convertido este sencillo plato en un clásico argentino.\n\nEn EL CÓRNER DE MONTBAU, seguimos tres reglas (con nuestros secretillos) esenciales para que las MILANESAS sean inolvidables e irrepetibles para el comensal, ahí van:\n\n- Elección de la carne de ternera lo más tierna posible, a nosotros nos gusta utilizar la nalga.\n- Una vez elegida la carne y cortada en su grueso ideal, damos paso al punto clave para conseguir el gusto y cremosidad deseado: el adobo, y ahí amigos, nos quedamos con nuestro secreto santiagueño.\n- Y, por último, el “golpeo”, es decir aplastar bien la carne con la finalidad de que cuando se empanen formen una unidad carne, huevo y pan rallado.\n\nNuestras especialidades son:\n\nNapolitana. Servida con salsa napolitana.\nSuiza. Servida con nata, cebolla, queso, jamón y tomate fresco.\nClásica. Acompañada de nuestras sabrosas patatas.",
+      "image": "imgs/clasico-milanesa-napolitana.webp"
     }
   ],
   "cartaData": {

@@ -31,8 +31,14 @@ function renderHeader(activePage) {
   return `
     <header class="site-header">
       <div class="container">
-        <a href="index.html" class="logo"><strong>${logoName[0]} DE&nbsp;<span>${logoName[1]}</span></strong></a>
-        <a href="tel:${restaurant.phone.replace(/\s/g, "")}" class="btn btn-outline header-cta">${restaurant.phone}</a>
+        <a href="index.html" class="logo">
+          <img src="imgs/loglECdM.png" alt="${restaurant.name}" class="logo-mark" />
+          <strong>${logoName[0]} DE&nbsp;<span>${logoName[1]}</span></strong>
+        </a>
+        <a href="tel:${restaurant.phone.replace(/\s/g, "")}" class="btn btn-outline header-cta">
+          <span class="header-cta__icon" aria-hidden="true">☎</span>
+          <span>${restaurant.phone}</span>
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="${nav.openMenu}">
           <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
