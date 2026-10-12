@@ -70,16 +70,16 @@ function renderFooter() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>${restaurant.name}</h4>
+            <h3>${restaurant.name}</h3>
             <p>${footer.description}</p>
           </div>
           <div class="footer-col">
-            <h4>${footer.contact}</h4>
+            <h3>${footer.contact}</h3>
             <a href="tel:${restaurant.phone.replace(/\s/g, "")}">${restaurant.phone}</a>
             <p>${restaurant.address}</p>
           </div>
           <div class="footer-col">
-            <h4>${footer.hours}</h4>
+            <h3>${footer.hours}</h3>
             <p>${restaurant.schedule} · ${restaurant.scheduleHours}</p>
             <a href="${basePath}html/carta.html">${footer.menu}</a>
             <a href="${basePath}html/menu-dia.html">${footer.dailyMenu}</a>
