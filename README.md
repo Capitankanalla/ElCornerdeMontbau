@@ -1,5 +1,12 @@
-ElCornerM
-Projecte d´actualització de la web del corner a dev amb vite i vanilla.
+
+## ElCornerM
+## Projecte d´actualització de la web del corner a dev amb vanilla.
+
+⚠️ Aquest projecte és només una demo per mostrar el disseny i les funcionalitats principals. Tots els drets reservats fins al lliurament al client.
+
+Si t'interessa un projecte similar o t'agrada el que estàs veient contacta'm per privat o al mail: [nanoxtechnologies@gmail.com]
+
+
 
 🍽️ MVP Web Restaurant: Redisseny i Autonomia
 Aquest projecte neix per resoldre el problema d'actualització i rendiment de la web actual (feta en WordPress). L'objectiu és oferir una web estàtica d'alta velocitat de càrrega, optimitzada per a dispositius mòbils, i que el restaurant pugui modificar els preus i plats de manera 100% autònoma i ràpida.
